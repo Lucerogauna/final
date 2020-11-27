@@ -5,24 +5,112 @@ Template 2097 Pop
 https://www.tooplate.com/view/2097-pop
 
 */
+#portfolio .folio-item {
+	padding: 0;
+	position: relative;
+	overflow: hidden;
+}
+#portfolio .folio-item img {
+	vertical-align: middle;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+#portfolio .overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+#portfolio .folio-item-table {
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+#portfolio .folio-item-cell {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+	position: relative;
+	left: -100%;
+}
+
+#portfolio .folio-title {
+	color: #FFFFFF;
+	font-size: 3.3rem;
+	padding: 0 3rem;
+	margin-bottom: 0;
+}
+#portfolio .folio-types {
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+font-family: 'Lora', serif;
+	font-size: 1.2rem;
+	letter-spacing: .1rem;
+	color: rgba(255, 255, 255, 0.6);
+}
+#portfolio .folio-item:hover .overlay {
+	background: rgba(0, 0, 0, 0.8);
+}
+#portfolio .folio-item:hover .folio-item-cell {
+	left: 0;
+}
+#portfolio .folio-item:hover img {
+	-webkit-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	transform: scale(1.05);
+}
+
+/**
+ * responsive:
+ * portfolio
+ * -------------------------------------------------------------------
+ */
+@media only screen and (max-width:1024px) {
+	#portfolio .folio-title {
+		font-size: 3.1rem;
+	}
+}
+@media only screen and (max-width:768px) {
+	#portfolio .folio-title {
+		font-size: 2.5rem;
+	}
+}
+@media only screen and (max-width:400px) {
+	#portfolio .folio-title {
+		font-size: 2.2rem;
+	}
+}
+
 
 body {
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  font-size: 19px;
-  font-weight: 300;
+  margin: 0;
   color: white;
-  position: relative;
 }
-
-h1 {
-  font-size: 2.8rem;
-}
-
-#tm-bg {
+video{
   position: fixed;
-    top: 0;
-    left: 0;
-  width: 100%; height: 100%; background:#151515 url(../img/fondo.jpg);
+  min-width: 100%;
+  min-height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -38,6 +126,47 @@ h1 {
   	height: 100%;
   	background: #111111;
   	opacity: .79;
+}
+
+main{
+width: 40;
+background: rbga(0,0,0,0.5);
+color: #fff;
+
+}
+
+body {
+  font-family: 'Loraregular', Helvetica, Arial, sans-serif;
+  font-size: 19px;
+  font-weight: 300;
+  color: white;
+  position: relative;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+#tm-bg {
+  position: fixed;
+    top: 0;
+    left: 0;
+  width: 100%; height: 100%; background:#151515 url(../img/videol.mp4)
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+.tm-bg-overlay{
+  position: absolute;
+  	top: 0;
+  	left: 0;
+  	width: 100%;
+  	height: 100%;
+  	background: #111111;
+  	opacity: .66;
 }
 
 #tm-bg:after {
@@ -130,7 +259,6 @@ p {
 .product:hover {
   background: #111111;
   color: #a9a9a9;
-  aca
 }
 
 .tm-nav-icon {
@@ -216,7 +344,6 @@ p {
 
 .details__bg--down {
   background: #111111;
-  aca
 }
 
 .details__bg {
